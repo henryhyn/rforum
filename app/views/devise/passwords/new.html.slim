@@ -1,0 +1,11 @@
+.login-box
+  h2 = I18n.t('devise.views.passwords.new.title')
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    = devise_error_messages!
+    .field
+      = f.label :email
+      = f.email_field :email, :autofocus => true
+    = f.submit I18n.t('devise.views.passwords.new.submit'), class: "btn btn-primary span2"
+    .pull-right
+      = link_to I18n.t('devise.views.links.sign_in'), new_session_path(resource_name), class: "btn"
+      = link_to I18n.t('devise.views.links.sign_up'), new_registration_path(resource_name), class: "btn"
