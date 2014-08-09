@@ -12,7 +12,7 @@ namespace :db do
 end
 
 def make_forums
-  Forum.create(name: "RFORUM", genre: "root")
+  Forum.create(name: "论坛", genre: "root")
   forum = Forum.find(1)
   forum.children.create(name: "影音", genre: "group")
   forum.children.create(name: "情感", genre: "group")

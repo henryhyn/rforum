@@ -1,4 +1,7 @@
-h4 = @topic.subject
+ul.breadcrumb.descend
+  - @topic.forum.self_and_ancestors.each do |forum|
+    li = link_to forum.name, frontend_forum_path(forum)
+  li = @topic.subject
 
 ul#posts
   = render :partial => 'post', :collection => @posts, :as => :post
