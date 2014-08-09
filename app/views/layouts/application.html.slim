@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    link rel="shortcut icon" href=(asset_path("favicon.jpg"))
+    /title = full_title yield(:title)
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    /script src="/assets/lib.mathjax/MathJax.js?config=default"
+    /script type="text/x-mathjax-config"
+    /  | MathJax.Hub.Config({
+    /  |   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    /  | });
+    = csrf_meta_tags
+    /= render 'layouts/shim'
+
+  body
+    = render 'layouts/header'
+    .container
+      = render 'layouts/banner'
+      = render 'layouts/navbar'
+      = render 'layouts/carouse'
+      /= render 'shared/alert'
+      == yield
+    = render 'layouts/footer'
+    /= debug(params) if Rails.env.development?

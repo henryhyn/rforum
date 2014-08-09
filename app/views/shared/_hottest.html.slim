@@ -1,0 +1,8 @@
+.panel.panel-default
+  .panel-heading
+    h4.panel-title 热门阅读
+  ul.list-group
+    - @posts.each_with_index do |post, index|
+      li.list-group-item
+        strong =' index + 1
+        = link_to post.title, root_path

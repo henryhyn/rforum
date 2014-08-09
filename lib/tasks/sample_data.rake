@@ -11,6 +11,6 @@ end
 
 def make_posts
   100.times do |n|
-    Post.create(title: Faker::Lorem.sentence(16))
+    Post.create(title: Faker::Lorem.sentence(1))
   end
 end
