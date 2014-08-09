@@ -10,5 +10,7 @@ namespace :db do
 end
 
 def make_posts
-  Post.create(title: "下面两个公式看起来有些区别。。。")
+  100.times do |n|
+    Post.create(title: Faker::Lorem.sentence(16))
+  end
 end
