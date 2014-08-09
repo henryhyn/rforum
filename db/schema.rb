@@ -24,12 +24,17 @@ ActiveRecord::Schema.define(version: 20140809161202) do
   end
 
   create_table "posts", force: true do |t|
+    t.integer  "forum_id"
+    t.integer  "topic_id"
+    t.integer  "user_id"
     t.string   "title",      default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "topics", force: true do |t|
+    t.integer  "forum_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
