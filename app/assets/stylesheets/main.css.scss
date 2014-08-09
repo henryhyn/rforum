@@ -365,3 +365,23 @@ ul#forums {
     }
   }
 }
+
+ul#topics {
+  list-style: none;
+  li {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #d9edf7;
+  }
+}
+
+ul#posts {
+  list-style: none;
+  li {
+    padding: 5px;
+    margin: 5px 0px;
+    border: 1px dashed lightgray;
+    background-color: #d9edf7;
+  }
+}

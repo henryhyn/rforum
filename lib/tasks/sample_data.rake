@@ -2,6 +2,8 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     make_forums
+    make_topics
+    make_posts
   end
 
   task initialize: :environment do
@@ -52,8 +54,24 @@ def make_forums
   forum.children.create(name: "单机", genre: "forum")
 end
 
+def make_topics
+  Forum.forum.each do |forum|
+    3.times do |n|
+      Topic.create(
+          forum_id: forum.id,
+          subject: Faker::Lorem.sentence(1)
+      )
+    end
+  end
+end
+
 def make_posts
-  100.times do |n|
-    Post.create(title: Faker::Lorem.sentence(1))
+  Topic.all.each do |topic|
+    3.times do |n|
+      Post.create(
+          topic_id: topic.id,
+          message: Faker::Lorem.sentence(10)
+      )
+    end
   end
 end

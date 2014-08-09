@@ -1,0 +1,4 @@
+h4 = @forum.name
+
+ul#topics
+  = render :partial => 'topic', :collection => @topics, :as => :topic

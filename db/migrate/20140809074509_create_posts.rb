@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.references :forum
       t.references :topic
       t.references :user
-      t.string :title, limit: 255, default: ""
+      t.text :message
       t.timestamps
     end
   end

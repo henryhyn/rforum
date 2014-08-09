@@ -1,2 +1,5 @@
 li class=(forum.genre)
-  = forum.name
+  - if forum.genre == "group"
+    = forum.name
+  - else
+    = link_to forum.name, frontend_forum_path(forum)

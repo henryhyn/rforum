@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  forum_id   :integer
 #  user_id    :integer
+#  subject    :string(255)      default("")
 #  created_at :datetime
 #  updated_at :datetime
 #

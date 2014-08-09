@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => 'frontend/forums#index'
 
+  scope :module => 'frontend', :as => 'frontend' do
+    resources :forums
+    resources :topics
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

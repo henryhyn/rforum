@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140809161202) do
     t.integer  "forum_id"
     t.integer  "topic_id"
     t.integer  "user_id"
-    t.string   "title",      default: ""
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140809161202) do
   create_table "topics", force: true do |t|
     t.integer  "forum_id"
     t.integer  "user_id"
+    t.string   "subject",    default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end
