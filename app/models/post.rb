@@ -6,7 +6,7 @@
 #  forum_id   :integer
 #  topic_id   :integer
 #  user_id    :integer
-#  title      :string(255)      default(""), not null
+#  title      :string(255)      default("")
 #  created_at :datetime
 #  updated_at :datetime
 #

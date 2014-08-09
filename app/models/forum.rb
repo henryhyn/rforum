@@ -3,8 +3,9 @@
 # Table name: forums
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
-#  parent_id  :integer
+#  name       :string(32)
+#  genre      :string(8)
+#  parent_id  :integer          default(0)
 #  lft        :integer
 #  rgt        :integer
 #  depth      :integer

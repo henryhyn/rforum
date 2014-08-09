@@ -14,8 +14,9 @@
 ActiveRecord::Schema.define(version: 20140809161202) do
 
   create_table "forums", force: true do |t|
-    t.string   "name"
-    t.integer  "parent_id"
+    t.string   "name",       limit: 32
+    t.string   "genre",      limit: 8
+    t.integer  "parent_id",             default: 0
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
@@ -27,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140809161202) do
     t.integer  "forum_id"
     t.integer  "topic_id"
     t.integer  "user_id"
-    t.string   "title",      default: "", null: false
+    t.string   "title",      default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end
