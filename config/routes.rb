@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope :module => 'frontend', :as => 'frontend' do
     resources :forums
     resources :topics
+    resources :posts
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
