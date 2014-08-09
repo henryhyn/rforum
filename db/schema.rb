@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140809161202) do
   create_table "forums", force: true do |t|
     t.string   "name",       limit: 32
     t.string   "genre",      limit: 8
-    t.integer  "parent_id",             default: 0
+    t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"

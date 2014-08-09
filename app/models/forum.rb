@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  name       :string(32)
 #  genre      :string(8)
-#  parent_id  :integer          default(0)
+#  parent_id  :integer
 #  lft        :integer
 #  rgt        :integer
 #  depth      :integer

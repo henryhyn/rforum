@@ -350,3 +350,18 @@ section {
   min-width: 100%;
   height: 300px;
 }
+
+ul#forums {
+  list-style: none;
+  li {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    &.group {
+      background-color: #c1e2b3;
+    }
+    &.forum {
+      background-color: #d9edf7;
+    }
+  }
+}
