@@ -2,5 +2,14 @@ ul.breadcrumb.descend
   - @forum.self_and_ancestors.each do |forum|
     li = link_to forum.name, frontend_forum_path(forum)
 
-ul#topics
-  = render :partial => 'topic', :collection => @topics, :as => :topic
+article#topics
+  .head.padding-horizontal
+    table.table
+      tr
+        td 全部主题 	最新  热门  热帖  精华  更多
+        td.by 作者
+        td.num 回复/查看
+        td.by 最后发表
+  .content.padding-horizontal
+    table.table.table-hover
+      = render :partial => 'topic', :collection => @topics, :as => :topic

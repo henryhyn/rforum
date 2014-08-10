@@ -200,6 +200,27 @@ article#posts {
   }
 }
 
+article#topics {
+  width: 960px;
+  border: 1px solid lightgrey;
+  .head {
+    background-color: #F2F2F2;
+    border-bottom: 1px solid lightgrey;
+  }
+  table {
+    margin-bottom: 0px;
+    tr:first-child td {
+      border-top: none;
+    }
+  }
+  .by {
+    width: 100px;
+  }
+  .num {
+    width: 100px;
+  }
+}
+
 section {
   &.service {
     display: table;
@@ -410,15 +431,5 @@ ul#forums {
     &.forum {
       background-color: #d9edf7;
     }
-  }
-}
-
-ul#topics {
-  list-style: none;
-  li {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #d9edf7;
   }
 }
