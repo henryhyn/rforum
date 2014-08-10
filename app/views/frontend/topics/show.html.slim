@@ -6,32 +6,29 @@ ul.breadcrumb.descend
 article#posts
   table cellspacing="0" cellpadding="0"
     tr
-      td.pls
-        .pn
-          .avatar
-            | 查看
-            span.pipe
-            | 回复
-      td.plc
-        .pn
-          .topic
-            strong = @topic.subject
-            small = link_to "[复制链接]", root_path
-            span.pull-right
-              = link_to root_path
-                span.glyphicon.glyphicon-print
-              = link_to root_path
-                span.glyphicon.glyphicon-arrow-left
-              = link_to root_path
-                span.glyphicon.glyphicon-arrow-right
+      td.left
+        .padding-both
+          | 查看
+          span.pipe
+          | 回复
+      td.right
+        .title.padding-both
+          strong = @topic.subject
+          small = link_to "[复制链接]", root_path
+          span.pull-right
+            = link_to root_path
+              i.glyphicon.glyphicon-print
+            = link_to root_path
+              i.glyphicon.glyphicon-arrow-left
+            = link_to root_path
+              i.glyphicon.glyphicon-arrow-right
   = render :partial => 'post', :collection => @posts, :as => :post
 
   table cellspacing="0" cellpadding="0"
     tr
-      td.pls.favatar
-        .pn
-          .avatar
-            .thumbnail
-              = image_tag "noavatar_middle.gif"
-      td#post_editor
+      td.left.pull-top
+        .padding-both
+          .thumbnail
+            = image_tag "noavatar_middle.gif"
+      td.right
         = render 'frontend/posts/form'

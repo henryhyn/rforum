@@ -123,15 +123,6 @@ a {
   }
 }
 
-.unit-rmb:before {
-  content: "\00a5";
-}
-
-.pipe {
-  margin: 0px 5px;
-  color: lightgray;
-}
-
 footer {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -141,101 +132,67 @@ footer {
 }
 
 article#posts {
-  border: 1px solid lightgray;
   background-color: #E5EDF2;
+  border: 1px solid lightgrey;
   table {
     background-color: white;
-    .pls {
+    td.left {
       width: 160px;
-      vertical-align: top;
       background-color: #d9edf7;
-      &.favatar {
-        height: 315px;
+    }
+    td.right {
+      width: 798px;
+    }
+    .head, .foot {
+      height: 37px;
+      &.head {
+        border-bottom: 1px dashed lightgrey;
+      }
+      &.foot {
+        border-top: 1px dashed lightgrey;
       }
     }
-    .plc {
-      width: 798px;
-      vertical-align: top;
-      padding: 0px 15px;
+    .title {
+      strong {
+        margin-right: 15px;
+      }
+      i {
+        margin-right: 0px;
+        margin-left: 10px;
+      }
     }
-    .pct {
+    .info {
+      .thumbnail {
+        border-radius: 0px;
+        margin-bottom: 0px;
+      }
+      table.columns {
+        background-color: transparent;
+        margin: 10px 0px;
+        td {
+          text-align: center;
+          width: 42px;
+        }
+        td + td {
+          border-left: 1px solid lightgrey;
+        }
+      }
+      ul {
+        margin-left: 7px;
+        margin-bottom: 0px;
+        li + li {
+          margin-top: 1px;
+        }
+        .msg {
+          margin-top: 6px;
+        }
+      }
+    }
+    .content {
       font-size: 14px;
-      padding: 15px 0px;
       ul, ol, dl {
         padding-left: 2em;
       }
-    }
-    .pi, .po, .pn {
-      height: 37px;
-      .authi {
-        padding: 10px 15px;
-        font-weight: bold;
-      }
-      .avatar {
-        padding: 10px 15px;
-        .thumbnail {
-          border-radius: 0px;
-          margin-bottom: 0px;
-        }
-      }
-      .tns {
-        padding: 0px 15px;
-        table {
-          background-color: transparent;
-          td {
-            text-align: center;
-            width: 42px;
-          }
-          td + td {
-            border-left: 1px solid lightgray;
-          }
-        }
-      }
-      .info {
-        padding: 10px 23px;
-        ul {
-          margin-bottom: 0px;
-          li {
-            padding: 1px 0px;
-          }
-        }
-      }
-      .msg {
-        padding: 0px 23px;
-        i {
-          margin-right: 5px;
-        }
-      }
-      .pti {
-        padding: 10px 0px;
-        a, span {
-          margin-left: 5px;
-        }
-      }
-      .topic {
-        padding: 10px 0px;
-        strong {
-          font-size: 14px;
-          margin-right: 15px;
-        }
-        small {
-          font-weight: normal;
-        }
-        span span {
-          padding: 0px 5px;
-        }
-      }
-      &.pi {
-        border-bottom: 1px dashed lightgray;
-      }
-      &.po {
-        border-top: 1px dashed lightgray;
-      }
-    }
-    #post_editor {
-      width: 798px;
-      height: 100px;
-      vertical-align: top;
     }
   }
   table + table {

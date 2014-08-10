@@ -1,63 +1,62 @@
 table id=("post_#{post.id}") cellspacing="0" cellpadding="0"
   tr
-    td.pls.favatar rowspan="2"
-      .pi
-        .authi henry
-        .avatar
-          .thumbnail
-            = image_tag "noavatar_middle.gif"
-        .tns
-          table
-            tr
-              td
-                | 1
-                br 主题
-              td
-                | 2
-                br 帖子
-              td
-                | 3
-                br 积分
-        .info
-          ul.list-unstyled
-            li 管理员
-            li
-              = image_tag "star_level3.gif"
-              = image_tag "star_level3.gif"
-              = image_tag "star_level3.gif"
-              = image_tag "star_level3.gif"
-            li 积分　　　23
-        .msg
-          i.icon-envelope
-          | 发消息
-    td.plc
-      .pi
-        .pti
-          i.icon-user
-          ' 发表于:
-          = time_ago_in_words(post.created_at)
-          | 以前
-          span.pipe |
-          ' 只看该作者
-          i.icon-caret-right
-          span.pull-right 沙发
-      .pct =raw post.message
+    td.left.pull-top
+      .head.padding-both
+        strong henry
+      .info.padding-both
+        .thumbnail
+          = image_tag "noavatar_middle.gif"
+        table.columns
+          tr
+            td
+              | 1
+              br 主题
+            td
+              | 1
+              br 主题
+            td
+              | 1
+              br 主题
+        ul.list-unstyled
+          li 管理员
+          li
+            = image_tag "star_level3.gif"
+            = image_tag "star_level3.gif"
+            = image_tag "star_level3.gif"
+          li 积分　　　23
+          li.msg
+            i.icon-envelope
+            | 发消息
+    td.right.pull-top.padding-horizontal
+      .head.padding-vertical
+        i.glyphicon.glyphicon-user
+        ' 发表于:
+        = time_ago_in_words(post.created_at)
+        | 以前
+        span.pipe |
+        ' 只看该作者
+        i.icon-caret-right
+        span.pull-right 沙发
+      .content.padding-vertical
+        =raw post.message
   tr
-    td.plc
-  tr
-    td.pls
-    td.plc
-      .po
-        .pti
-          ul.list-inline.pull-left
-            li.glyphicon.glyphicon-share-alt
-              = link_to "回复", root_path
-            li.glyphicon.glyphicon-thumbs-up
-              = link_to "支持", root_path
-            li.glyphicon.glyphicon-thumbs-down
-              = link_to "反对", root_path
-            li.glyphicon.glyphicon-edit
-              = link_to "编辑", root_path
-            li.glyphicon.glyphicon-remove
-              = link_to I18n.t('navigation.destroy'), frontend_post_path(post), data: {:confirm => I18n.t('navigation.confirmation')}, :method => :delete
-          span.pull-right 举报
+    td.left
+    td.right.padding-horizontal
+      .foot.padding-vertical
+        ul.list-inline.pull-left
+          li
+            i.glyphicon.glyphicon-share-alt
+            = link_to "回复", root_path
+          li
+            i.glyphicon.glyphicon-thumbs-up
+            = link_to "支持", root_path
+          li
+            i.glyphicon.glyphicon-thumbs-down
+            = link_to "反对", root_path
+          li
+            i.glyphicon.glyphicon-edit
+            = link_to "编辑", root_path
+          li
+            i.glyphicon.glyphicon-remove
+            = link_to I18n.t('navigation.destroy'), frontend_post_path(post), data: {:confirm => I18n.t('navigation.confirmation')}, :method => :delete
+        span.pull-right 举报

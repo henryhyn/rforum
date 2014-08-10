@@ -1,0 +1,45 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.unit-rmb:before {
+  content: "\00a5";
+}
+.unit-dollar:before {
+  content: "\00a5";
+}
+.unit-celsius:after {
+  content: "\00a5";
+}
+
+.pull-top {
+  vertical-align: top;
+}
+
+.pull-bottom {
+  vertical-align: bottom;
+}
+
+.padding-both {
+  padding: 10px 15px;
+}
+
+.padding-vertical {
+  padding: 10px 0px;
+}
+
+.padding-horizontal {
+  padding: 0px 15px;
+}
+
+.pipe {
+  margin: 0px 5px;
+  color: lightgray;
+}
+
+// 显示图标, 图标右边留 5px 空白, 如果不留白, 使用 span
+i {
+  margin-right: 5px;
+}
+
