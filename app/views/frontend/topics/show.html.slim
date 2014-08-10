@@ -26,4 +26,13 @@ article#posts
                 span.glyphicon.glyphicon-arrow-right
   = render :partial => 'post', :collection => @posts, :as => :post
 
-= render 'frontend/posts/form'
+  table cellspacing="0" cellpadding="0"
+    tr
+      td.pls.favatar
+        .pn
+          .avatar
+            .thumbnail
+              = image_tag "noavatar_middle.gif"
+      td.plc
+        .pn
+          = render 'frontend/posts/form'
