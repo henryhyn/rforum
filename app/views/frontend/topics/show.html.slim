@@ -4,6 +4,26 @@ ul.breadcrumb.descend
   li = @topic.subject
 
 article#posts
+  table cellspacing="0" cellpadding="0"
+    tr
+      td.pls
+        .pn
+          .avatar
+            | 查看
+            span.pipe
+            | 回复
+      td.plc
+        .pn
+          .topic
+            strong = @topic.subject
+            small = link_to "[复制链接]", root_path
+            span.pull-right
+              = link_to root_path
+                span.glyphicon.glyphicon-print
+              = link_to root_path
+                span.glyphicon.glyphicon-arrow-left
+              = link_to root_path
+                span.glyphicon.glyphicon-arrow-right
   = render :partial => 'post', :collection => @posts, :as => :post
 
 = render 'frontend/posts/form'

@@ -1,4 +1,4 @@
-table class=("post_#{post.id}") cellspacing="0" cellpadding="0"
+table id=("post_#{post.id}") cellspacing="0" cellpadding="0"
   tr
     td.pls.favatar rowspan="2"
       .pi
@@ -32,7 +32,15 @@ table class=("post_#{post.id}") cellspacing="0" cellpadding="0"
           | 发消息
     td.plc
       .pi
-        .pti a
+        .pti
+          i.icon-user
+          ' 发表于:
+          = time_ago_in_words(post.created_at)
+          | 以前
+          span.pipe |
+          ' 只看该作者
+          i.icon-caret-right
+          span.pull-right 沙发
       .pct = post.message
   tr
     td.plc
@@ -40,4 +48,7 @@ table class=("post_#{post.id}") cellspacing="0" cellpadding="0"
     td.pls
     td.plc
       .po
-        .pti a
+        .pti
+          i.icon-reply
+          | 回复
+          span.pull-right 举报

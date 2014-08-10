@@ -127,6 +127,11 @@ a {
   content: "\00a5";
 }
 
+.pipe {
+  margin: 0px 5px;
+  color: lightgray;
+}
+
 footer {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -157,7 +162,7 @@ article#posts {
       font-size: 14px;
       padding: 15px 0px;
     }
-    .pi, .po {
+    .pi, .po, .pn {
       height: 37px;
       .authi {
         padding: 10px 15px;
@@ -200,6 +205,22 @@ article#posts {
       }
       .pti {
         padding: 10px 0px;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .topic {
+        padding: 10px 0px;
+        strong {
+          font-size: 14px;
+          margin-right: 15px;
+        }
+        small {
+          font-weight: normal;
+        }
+        span span {
+          padding: 0px 5px;
+        }
       }
       &.pi {
         border-bottom: 1px dashed lightgray;
