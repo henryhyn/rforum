@@ -41,7 +41,7 @@ table id=("post_#{post.id}") cellspacing="0" cellpadding="0"
           ' 只看该作者
           i.icon-caret-right
           span.pull-right 沙发
-      .pct = post.message
+      .pct =raw post.message
   tr
     td.plc
   tr
@@ -49,6 +49,15 @@ table id=("post_#{post.id}") cellspacing="0" cellpadding="0"
     td.plc
       .po
         .pti
-          i.icon-reply
-          | 回复
+          ul.list-inline.pull-left
+            li.glyphicon.glyphicon-share-alt
+              = link_to "回复", root_path
+            li.glyphicon.glyphicon-thumbs-up
+              = link_to "支持", root_path
+            li.glyphicon.glyphicon-thumbs-down
+              = link_to "反对", root_path
+            li.glyphicon.glyphicon-edit
+              = link_to "编辑", root_path
+            li.glyphicon.glyphicon-remove
+              = link_to I18n.t('navigation.destroy'), frontend_post_path(post), data: {:confirm => I18n.t('navigation.confirmation')}, :method => :delete
           span.pull-right 举报

@@ -161,6 +161,9 @@ article#posts {
     .pct {
       font-size: 14px;
       padding: 15px 0px;
+      ul, ol, dl {
+        padding-left: 2em;
+      }
     }
     .pi, .po, .pn {
       height: 37px;
@@ -205,8 +208,8 @@ article#posts {
       }
       .pti {
         padding: 10px 0px;
-        i {
-          margin-right: 5px;
+        a, span {
+          margin-left: 5px;
         }
       }
       .topic {
@@ -228,6 +231,11 @@ article#posts {
       &.po {
         border-top: 1px dashed lightgray;
       }
+    }
+    #post_editor {
+      width: 798px;
+      height: 100px;
+      vertical-align: top;
     }
   }
   table + table {
