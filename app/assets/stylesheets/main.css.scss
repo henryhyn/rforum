@@ -206,12 +206,20 @@ article#topics {
   .head {
     background-color: #F2F2F2;
     border-bottom: 1px solid lightgrey;
+    td {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
   table {
     margin-bottom: 0px;
     tr:first-child td {
       border-top: none;
     }
+  }
+  .topic {
+    font-size: 14px;
+    vertical-align: middle;
   }
   .by {
     width: 100px;

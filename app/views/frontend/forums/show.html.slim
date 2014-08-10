@@ -13,3 +13,5 @@ article#topics
   .content.padding-horizontal
     table.table.table-hover
       = render :partial => 'topic', :collection => @topics, :as => :topic
+
+= render 'frontend/posts/form'
