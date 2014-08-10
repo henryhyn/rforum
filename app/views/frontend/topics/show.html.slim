@@ -3,7 +3,7 @@ ul.breadcrumb.descend
     li = link_to forum.name, frontend_forum_path(forum)
   li = @topic.subject
 
-ul#posts
+article#posts
   = render :partial => 'post', :collection => @posts, :as => :post
 
 = render 'frontend/posts/form'

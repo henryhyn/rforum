@@ -70,7 +70,7 @@ def make_posts
     3.times do |n|
       Post.create(
           topic_id: topic.id,
-          message: Faker::Lorem.sentence(10)
+          message: Faker::Lorem.sentence(200)
       )
     end
   end

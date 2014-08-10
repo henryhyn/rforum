@@ -135,21 +135,82 @@ footer {
   border-top: 1px solid #BDC3C7;
 }
 
-aside, article {
-  float: left;
-  padding: 10px;
-  &.aside-index, &.aside-desc {
-    width: 300px;
+article#posts {
+  border: 1px solid lightgray;
+  background-color: #E5EDF2;
+  table {
+    background-color: white;
+    .pls {
+      width: 160px;
+      vertical-align: top;
+      background-color: #d9edf7;
+      &.favatar {
+        height: 315px;
+      }
+    }
+    .plc {
+      width: 798px;
+      vertical-align: top;
+      padding: 0px 15px;
+    }
+    .pct {
+      font-size: 14px;
+      padding: 15px 0px;
+    }
+    .pi, .po {
+      height: 37px;
+      .authi {
+        padding: 10px 15px;
+        font-weight: bold;
+      }
+      .avatar {
+        padding: 10px 15px;
+        .thumbnail {
+          border-radius: 0px;
+          margin-bottom: 0px;
+        }
+      }
+      .tns {
+        padding: 0px 15px;
+        table {
+          background-color: transparent;
+          td {
+            text-align: center;
+            width: 42px;
+          }
+          td + td {
+            border-left: 1px solid lightgray;
+          }
+        }
+      }
+      .info {
+        padding: 10px 23px;
+        ul {
+          margin-bottom: 0px;
+          li {
+            padding: 1px 0px;
+          }
+        }
+      }
+      .msg {
+        padding: 0px 23px;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .pti {
+        padding: 10px 0px;
+      }
+      &.pi {
+        border-bottom: 1px dashed lightgray;
+      }
+      &.po {
+        border-top: 1px dashed lightgray;
+      }
+    }
   }
-  &.article-index, &.article-desc {
-    width: 660px;
-  }
-  &.aside-brief {
-    width: 370px;
-  }
-  &.article-brief {
-    margin-left: 15px;
-    width: 825px;
+  table + table {
+    margin-top: 5px;
   }
 }
 
@@ -372,16 +433,6 @@ ul#topics {
     font-size: 14px;
     font-weight: bold;
     padding: 10px;
-    background-color: #d9edf7;
-  }
-}
-
-ul#posts {
-  list-style: none;
-  li {
-    padding: 5px;
-    margin: 5px 0px;
-    border: 1px dashed lightgray;
     background-color: #d9edf7;
   }
 }
