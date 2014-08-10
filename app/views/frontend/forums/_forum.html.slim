@@ -1,5 +1,11 @@
-li class=(forum.genre)
-  - if forum.genre == "group"
-    = forum.name
-  - else
-    = link_to forum.name, frontend_forum_path(forum)
+tr class=(forum.genre)
+  td.forum
+    i.icon-comments
+    - if forum.genre == "group"
+      = forum.name
+    - else
+      = link_to forum.name, frontend_forum_path(forum)
+  td a
+  td
+    | a
+    br b

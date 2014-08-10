@@ -427,17 +427,23 @@ section {
   height: 300px;
 }
 
-ul#forums {
-  list-style: none;
-  li {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px;
-    &.group {
-      background-color: #c1e2b3;
-    }
-    &.forum {
-      background-color: #d9edf7;
+table#forums {
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  tr.group {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    background-color: #d9edf7;
+  }
+  tr.forum + tr.forum {
+    border-top: 1px dashed lightgrey;
+  }
+  td {
+    border: none;
+    vertical-align: middle;
+    td.forum {
+      font-size: 16px;
     }
   }
 }
