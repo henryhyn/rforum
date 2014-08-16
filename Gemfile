@@ -29,7 +29,7 @@ gem 'awesome_nested_set', '3.0.0.rc.3' # An awesome nested set implementation fo
 gem 'faker', '1.2.0' # generate fake data: names, addresses, phone numbers, etc.
 gem 'kaminari', '0.15.0' # paginator for Rails
 gem 'roo', '1.13.2' # Roo can access the contents of various spreadsheet files.
-gem 'nokogiri', '1.6.1' # HTML, XML, SAX, and Reader parser
+gem 'nokogiri', '1.6.3.1' # HTML, XML, SAX, and Reader parser
 
 group :development, :test do
   gem 'annotate', '2.6.5' # annotates

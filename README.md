@@ -7,7 +7,7 @@
 转到终端, 执行如下命令.
 
 ```
-cd forum
+cd rforum
 sudo gem install rails -v 4.1.2
 sudo bundle install
 rake db:create
